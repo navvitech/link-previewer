@@ -1,3 +1,19 @@
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 5.5px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  html {
+    font-size: 9px;
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +26,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.clip {
+  height: 100%;
+  width: 100%;
+  transition: 3s;
+
+  background-size: cover;
+  background-image: url('https://media.istockphoto.com/photos/deep-space-background-picture-id178149253?k=20&m=178149253&s=612x612&w=0&h=TJOJWolz2MJt-QLH0jPvbl-Bz-4ySIvSTVdKoLP1lfg=');
+  clip-path: circle(1%);
+}
+.clip.active {
+  clip-path: circle(300%);
 }

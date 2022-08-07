@@ -1,23 +1,42 @@
-import logo from './logo.svg';
+import { useNavigate } from 'react-router-dom';
 import './App.css';
 
 function App() {
+  const navigate = useNavigate();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div
+      style={{
+        background: 'white',
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}
+    >
+      <div style={{ textAlign: 'center' }}>
+        <h1 style={{ fontSize: '12rem', marginBottom: 10 }}>Link previewer</h1>
+        <p
+          style={{ fontSize: '2.5rem', color: 'orangered', fontWeight: 'bold' }}
         >
-          Learn React
-        </a>
-      </header>
+          Get to know about a website before actually visiting it
+        </p>
+        <button
+          style={{
+            border: '4px solid green',
+            color: 'red',
+            width: '13rem',
+            height: '13rem',
+            borderRadius: '50%',
+            background: 'transparent',
+            fontWeight: 'bold',
+            marginTop: 50,
+            fontSize: '2rem',
+          }}
+          onClick={() => navigate('/preview')}
+        >
+          <span className='preview'>Preview</span>
+        </button>
+      </div>
     </div>
   );
 }

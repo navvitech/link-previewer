@@ -1,0 +1,11 @@
+.fade {
+  transform: rotate(180deg);
+}
+.MuiButton-root {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.MuiButton-root:hover {
+  background: transparent;
+}
